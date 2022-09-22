@@ -16,7 +16,8 @@ export const startLogin = ({ email, password }) => {
             localStorage.setItem('token-init-date', new Date().getTime() );
             dispatch( login(user) );
         } catch (error) {
-            console.log(error);
+            toast.error(error.response.data.msg)
+            dispatch( logout() )
         }
     }
 }
