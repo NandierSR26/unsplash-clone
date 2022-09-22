@@ -1,0 +1,23 @@
+.form__register {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    row-gap: 1rem;
+    width: 100%;
+}
+
+.form__field {
+    grid-column: 1 / 3;
+}
+
+.form__field--fn {
+    grid-column: 1 / 2;
+}
+
+.form__field--ln {
+    grid-column: 2 / 3;
+}
+
+.form__submit--register {
+    grid-column: 1 / 3;
+}

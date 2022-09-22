@@ -1,0 +1,42 @@
+@import '../../../index.css';
+
+.auth-page {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 2rem 0; */
+}
+
+.form__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.form__logo {
+    width: 15rem;
+}
+
+.form__title {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: var(--poppins);
+    color: rgb(16, 16, 24);
+}
+
+.error__message {
+    font-size: .8rem;
+    font-weight: 700;
+    font-family: var(--poppins);
+    color: rgb(237, 54, 54);
+}

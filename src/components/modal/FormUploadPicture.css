@@ -1,0 +1,184 @@
+.container {
+    width: 400px;
+    height: fit-content;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 36px 32px 44px;
+    border-radius: 12px;
+    /* box-shadow: 0px 3px 5px #ccc; */
+}
+
+.title {
+    font-size: 18px;
+    color: #4F4F4F;
+    text-align: center;
+    margin-bottom: .5rem;
+}
+.subtitle {
+    font-size: 10px;
+    color: #828282;
+    text-align: center;
+}
+
+.picture__title {
+    padding: .5rem;
+    width: 100%;
+    margin: 1rem 0;
+    outline: none;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-family: var(--noto-sans);
+    font-size: .8rem;
+    color: #4F4F4F;
+}
+
+.image-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-width: 100%;
+    min-height: 200px;
+    width: fit-content;
+    height: fit-content;
+    border: 3px dashed #97BEF4;
+    background-color: #F6F8FB;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.without-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.img__preview {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.image {
+    width: 338px;
+    height: 219px;
+    background-color: #F6F8FB;
+    border-radius: 10px;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+}
+
+.img-placeholder {
+    background-image: url('../../assets/image.svg');
+    background-size: cover;
+    width: 114.13px;
+    Height: 88.24px;
+}
+
+.text-placeholder p {
+    color: #BDBDBD;
+    font-size: 12px;
+}
+
+.submit__upload {
+    color: #FAFAFB;
+    font-family: var(--noto-sans);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    background-color: #2F80ED;
+    border-radius: 8px;
+    padding: .8rem 1.5rem;
+}
+
+.submit__upload:hover {
+    background-color: #2f72ca;
+}
+
+.submit__upload:active {
+    background-color: #2F80ED;
+}
+
+.btn-file{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.drag-file {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+/* ======================== modal ====================== */
+
+.ReactModalPortal > div{
+    opacity: 0;
+}
+
+.ReactModalPortal .ReactModal__Overlay {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    transition: opacity .2s ease-in-out;
+    z-index: 999;
+}
+
+.modal-fondo {
+    background-color: rgba(0, 0, 0, 0.3);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: fixed;
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open {
+    opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close {
+    opacity: 0;
+}
+
+.modal {
+    background: white;
+    border-radius: 12px;
+    color: rgb(51, 51, 51);
+    display: inline;
+    max-width: 620px;
+    max-height: fit-content;
+    outline: none
+}
+
+/* ================= date picker ================*/
+.react-datetime-picker input:focus {
+    outline: none;
+}
+
+.react-datetime-picker {
+    display: flex;
+    border: 0px solid gray !important;
+}
