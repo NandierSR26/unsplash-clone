@@ -71,7 +71,6 @@ export const startUpdateAvatar = ( avatar = '' ) => {
         formData.append('avatar', avatar)
         try {
             const { data } = await clienteAxios.put(`/users/update/${ _id }`, formData)
-            console.log(data);
             dispatch( login( data.user ) )
             toast.success(`${data.msg}`)
         } catch (error) {
