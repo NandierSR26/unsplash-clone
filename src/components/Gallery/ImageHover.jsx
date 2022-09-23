@@ -1,9 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useNavigate, useParams } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import { Link, useParams } from 'react-router-dom';
 import UserWithoutPicture from '../../assets/blank-profile-picture.svg'
-import { clienteAxios, clienteAxiosDevelopment } from '../../config/axios';
 import { startDeletePictures } from '../../store/pictures/thunks';
 
 export const ImageHover = ({ image, visibility }) => {

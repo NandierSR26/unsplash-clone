@@ -31,23 +31,26 @@ export const FormUploadPicture = () => {
         setPicture(null)
         formik.values.title = ''
     }
-    
+
     const changeImage = (e) => {
         const element = "img__preview"
         setPicture(e.target.files[0]);
-        previewImage( e.target.files[0], element )
+        previewImage(e.target.files[0], element)
     }
-    
+
     const formik = useFormik({
         initialValues: initialValues(),
         validationSchema: Yup.object({
             title: Yup.string().matches(/^[a-zA-Z0-9-]*$/, "The picture's  title can't have spaces, use hyphens").required("The picture's title is required"),
         }),
-        onSubmit: ( data ) => {
-            if ( !picture ) {
+        onSubmit: (data) => {
+            if (!picture) {
                 toast.error('You must upload a picture')
             } else {
                 dispatch(startNewPicture(data.title, picture))
+                setPicture(null)
+                formik.values.title = ''
+
             }
         }
     })
@@ -63,7 +66,7 @@ export const FormUploadPicture = () => {
         >
 
 
-            <form className="container" onSubmit={ formik.handleSubmit }>
+            <form className="container" onSubmit={formik.handleSubmit}>
                 <p className="title">Upload your image</p>
                 <p className="subtitle">File should be Jpeg, Png...</p>
                 <input
@@ -71,10 +74,10 @@ export const FormUploadPicture = () => {
                     name="title"
                     placeholder="Title"
                     className="picture__title"
-                    onChange={ formik.handleChange }
-                    value={ formik.values.title }
+                    onChange={formik.handleChange}
+                    value={formik.values.title}
                 />
-                <div className="error__message">{ formik.errors.title }</div>
+                <div className="error__message">{formik.errors.title}</div>
 
                 <div className="image-input">
                     {

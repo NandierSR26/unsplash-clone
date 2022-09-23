@@ -189,6 +189,7 @@
     text-decoration: none;
     color: #878585;
     padding: 1rem 3rem 1rem 1rem;
+    cursor: pointer;
 }
 
 .header__option--last {

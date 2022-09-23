@@ -20,6 +20,7 @@ export const UnsplashApp = () => {
                     pauseOnFocusLoss
                     draggable
                     pauseOnHover
+                    
                 />
             </BrowserRouter>
         </Provider>

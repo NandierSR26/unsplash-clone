@@ -43,10 +43,12 @@
     text-decoration: underline;
     cursor: pointer;
     height: fit-content;
+    text-align: center;
 }
 
 .change__profile__photo {
     color: rgb(28, 28, 105);
+    text-align: center;
 }
 
 .input__file {
