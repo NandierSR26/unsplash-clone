@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import UserWithoutPicture from '../../assets/blank-profile-picture.svg'
-import { clienteAxios } from '../../config/axios';
+import { clienteAxios, clienteAxiosDevelopment } from '../../config/axios';
 import { startDeletePictures } from '../../store/pictures/thunks';
 
 export const ImageHover = ({ image, visibility }) => {
@@ -17,11 +17,6 @@ export const ImageHover = ({ image, visibility }) => {
 
     const handleDeleteImage = (id) => {
         dispatch( startDeletePictures( id ) )
-    }
-
-    const handleDownload = async (id) => {
-        const { data } = await clienteAxios.get(`/pictures/download/${ id }`)
-        toast.success( data.msg )
     }
 
     return (
@@ -39,9 +34,9 @@ export const ImageHover = ({ image, visibility }) => {
                     </button>
 
                 }
-                <button className="btn-download-picture" onClick={ () => handleDownload(_id) }>
+                <a href={img} download className="btn-download-picture">
                     <i className="fa-solid fa-arrow-down"></i>
-                </button>
+                </a>
             </div>
             <div className="picture__profile">
                 {
