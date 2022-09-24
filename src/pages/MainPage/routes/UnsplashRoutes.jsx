@@ -6,8 +6,6 @@ import { SearchResults } from '../search/SearchResults'
 
 export const UnsplashRoutes = () => {
 
-    // const { status } = useSelector(state => state.auth)
-
     return (
         <Routes>
             <Route path="/:username" element={<ProfilePage />} />

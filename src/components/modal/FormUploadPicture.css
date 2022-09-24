@@ -56,6 +56,7 @@
     justify-content: center;
     width: 100%;
     height: 100%;
+    margin: 3rem 0;
 }
 
 .img__preview {
@@ -168,8 +169,17 @@
     color: rgb(51, 51, 51);
     display: inline;
     max-width: 620px;
-    max-height: fit-content;
-    outline: none
+    max-height: 600px;
+    outline: none;
+    overflow-y: scroll;
+}
+
+.modal::-webkit-scrollbar {
+    width: 2px;
+}
+
+.modal::-webkit-scrollbar-thumb {
+    background-color: transparent;
 }
 
 /* ================= date picker ================*/

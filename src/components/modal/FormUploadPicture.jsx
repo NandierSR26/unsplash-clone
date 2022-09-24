@@ -22,8 +22,9 @@ Modal.setAppElement('#root');
 
 export const FormUploadPicture = () => {
 
-    const [picture, setPicture] = useState(null);
+    const [ picture, setPicture ] = useState(null);
     const { modalOpen } = useSelector(state => state.ui)
+    const { isSaving } = useSelector( state => state.pictures )
     const dispatch = useDispatch();
 
     const closeModal = () => {
@@ -50,7 +51,6 @@ export const FormUploadPicture = () => {
                 dispatch(startNewPicture(data.title, picture))
                 setPicture(null)
                 formik.values.title = ''
-
             }
         }
     })
@@ -106,7 +106,12 @@ export const FormUploadPicture = () => {
                     />
 
                 </div>
-                <input type="submit" className="submit__upload" value="upload" />
+                <input 
+                    type="submit" 
+                    className={ ( isSaving ) ? "submit__upload disabled" : "submit__upload" } 
+                    value={ ( isSaving ) ? "Uploading..." : "Upload" } 
+                    disabled={ isSaving }
+                />
             </form>
 
         </Modal>
