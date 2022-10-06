@@ -102,7 +102,8 @@ export const checkAuthToken = () => {
             localStorage.setItem('token-init-date', new Date().getTime() );
             dispatch( login(data.user) )
         } catch (error) {
-            
+            console.log({error});
+            dispatch( logout() )
         }
     }
 }
