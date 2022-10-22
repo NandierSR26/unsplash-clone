@@ -33,6 +33,8 @@ export const AppRouter = () => {
                             <Route path="/auth/*" element={<AuthRoutes />} />
                             <Route path="/" element={<Home />} />
                             <Route path="/*" element={<Navigate to="/" />} />
+                            <Route path="/:username" element={<ProfilePage />} />
+                            <Route path="/search/:term" element={<SearchResults />} />
                         </>
                     )
             }
