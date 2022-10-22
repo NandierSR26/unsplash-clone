@@ -5,6 +5,8 @@ import { UnsplashRoutes } from "../pages/MainPage/routes/UnsplashRoutes"
 import { useEffect } from "react"
 import { checkAuthToken } from "../store/auth/thunks"
 import { Home } from "../pages/MainPage/Home"
+import { ProfilePage } from "../pages/MainPage/ProfilePage/ProfilePage"
+import { SearchResults } from "../pages/MainPage/search/SearchResults"
 
 export const AppRouter = () => {
 
