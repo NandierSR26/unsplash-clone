@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import { AppRouter } from './router/AppRouter'
 import { Provider } from 'react-redux'
 import { store } from './store'
@@ -8,7 +8,7 @@ import { ToastContainer } from 'react-toastify'
 export const UnsplashApp = () => {
     return (
         <Provider store={store}>
-            <BrowserRouter>
+            <HashRouter>
                 <AppRouter />
                 <ToastContainer
                     position="top-right"
@@ -21,7 +21,7 @@ export const UnsplashApp = () => {
                     draggable
                     pauseOnHover
                 />
-            </BrowserRouter>
+            </HashRouter>
         </Provider>
     )
 }
